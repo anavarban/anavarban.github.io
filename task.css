@@ -1,0 +1,67 @@
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes armSwing {
+  0%, 100% {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform-origin: center;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes legBounce {
+  0%, 100% {
+    transform-origin: center;
+    transform: translateY(0);
+  }
+  50% {
+    transform-origin: center;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes headBob {
+  0%, 100% {
+    transform-origin: top center;
+    transform: translateY(0);
+  }
+  50% {
+    transform-origin: top center;
+    transform: translateY(-15px);
+  }
+}
+
+.man {
+  animation: jump 2s infinite ease-out;
+}
+
+.head {
+  animation: headBob 2s infinite ease-out;
+}
+
+.body {
+  animation: armSwing 2s infinite ease-out;
+}
+
+.left.hand,
+.right.hand {
+  animation: armSwing 2s infinite ease-out;
+}
+
+.feet {
+  animation: legBounce 2s infinite ease-out;
+}
+
+.left.foot,
+.right.foot {
+  animation: legBounce 2s infinite ease-out;
+}
